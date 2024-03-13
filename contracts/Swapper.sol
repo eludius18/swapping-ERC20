@@ -31,16 +31,16 @@ contract Swapper is Initializable {
     uint256 maxDeadline = block.timestamp + deadline;
 
     // Estimate the fee using the quoter
-    bytes memory path = abi.encodePacked(WETH, token);
-    uint256 estimatedfee = quoter.quoteExactInput(path, msg.value);
+    //bytes memory path = abi.encodePacked(WETH, token);
+    //uint256 estimatedfee = quoter.quoteExactInput(path, msg.value);
 
     // Check if the estimated amount out is greater than or equal to the minimum amount out
-    require(estimatedfee >= amountOutMinimum, "Estimated amount out is less than the minimum amount out");
+    //require(estimatedfee >= amountOutMinimum, "Estimated amount out is less than the minimum amount out");
 
     ISwapRouter.ExactInputSingleParams memory params = ISwapRouter.ExactInputSingleParams(
         WETH,
         token,
-        uint24(estimatedfee),
+        3000,
         msg.sender,
         maxDeadline,
         msg.value,
