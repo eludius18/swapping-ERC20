@@ -2,7 +2,7 @@ import * as dotenv from "dotenv";
 
 import { HardhatUserConfig, task } from "hardhat/config";
 import "@nomiclabs/hardhat-ethers";
-import "@nomiclabs/hardhat-etherscan";
+import "@nomicfoundation/hardhat-verify";
 import "@nomiclabs/hardhat-waffle";
 import "@typechain/hardhat";
 import "hardhat-gas-reporter";
@@ -43,10 +43,10 @@ const config: HardhatUserConfig = {
     deployer: 0
   },
   networks: {
-    /* arbitrum: {
+    arbitrum: {
       url: process.env.RPC_URL_ARBITRUM,
       accounts:[`0x${process.env.PRIVATE_KEY}`],
-    }, */
+    },
     hardhat: {
       mining: {
         auto: true,
@@ -59,6 +59,9 @@ const config: HardhatUserConfig = {
     localhost: {
       url: "http://127.0.0.1:8545"
     },
+  },
+  etherscan: {
+    apiKey: 'C14TZGVGQXZS9Y65GISNKG6EW8RG3XNKRD'
   },
 };
 
