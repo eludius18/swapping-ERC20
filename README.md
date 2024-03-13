@@ -2,6 +2,10 @@
 
 This project is a smart contract that allows you to swap ERC20 tokens using Uniswap V3.
 
+## Deployed & Verified Contract in Arbitrum Sepolia
+
+[https://sepolia.arbiscan.io/address/0x571A0a3655267A358E4A1d1eADe1E7F5AFE28e01#code](https://sepolia.arbiscan.io/address/0x571A0a3655267A358E4A1d1eADe1E7F5AFE28e01#code)
+
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
@@ -117,4 +121,4 @@ To contribute to Swapping ERC20 Tokens, follow these steps:
 
 ## License
 
-This project uses the following license: [MIT](<link_to_license>).
+This project uses the following license: [UNLICENSED](<link_to_license>).

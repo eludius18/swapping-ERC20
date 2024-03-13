@@ -23,6 +23,7 @@ describe('Swapper Test', function () {
       'Swapper',
       swapperDeployment.address
     );
+
   });
 
   describe('Modifiers checks', function () {

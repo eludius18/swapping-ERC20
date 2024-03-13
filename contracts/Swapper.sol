@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.20;
 
+import "./interface/IERC20Swapper.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
@@ -8,7 +9,8 @@ import "@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol";
 import "@uniswap/v3-periphery/contracts/interfaces/ISwapRouter.sol";
 import "@uniswap/v3-periphery/contracts/interfaces/IQuoter.sol";
 
-contract Swapper is Initializable, OwnableUpgradeable, PausableUpgradeable {
+
+contract Swapper is Initializable, OwnableUpgradeable, PausableUpgradeable, IERC20Swapper {
 
     ISwapRouter public router; // Uniswap V3 router
     IQuoter public quoter; // Uniswap V3 quoter
