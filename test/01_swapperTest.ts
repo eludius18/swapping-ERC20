@@ -91,7 +91,13 @@ describe('Swapper Test', function () {
       it('should perform swap with valid parameters and return amountOut', async function () {
         const value = ethers.parseEther('0.1');
         const tokenAddress = process.env.TOKENERC20;
+        const contract = new ethers.Contract(tokenAddress, [
+          "function balanceOf(address owner) view returns (uint256)",
+        ], owner);
+        const balanceBefore = await contract.balanceOf(owner.getAddress());
         await swapperContract.connect(owner).swapEtherToToken(tokenAddress, 1, { value });
+        const balanceAfter = await contract.balanceOf(owner.getAddress());
+        expect(balanceAfter).not.to.equal(balanceBefore); 
       });
     });
   });
