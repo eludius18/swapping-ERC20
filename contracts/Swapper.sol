@@ -7,13 +7,10 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol";
 import "@uniswap/v3-periphery/contracts/interfaces/ISwapRouter.sol";
-import "@uniswap/v3-periphery/contracts/interfaces/IQuoter.sol";
-
 
 contract Swapper is Initializable, OwnableUpgradeable, PausableUpgradeable, IERC20Swapper {
 
     ISwapRouter public router; // Uniswap V3 router
-    IQuoter public quoter; // Uniswap V3 quoter
     address public WETH; // WETH address
     uint256 public deadline; //  Deadline for the swap
 
@@ -24,12 +21,10 @@ contract Swapper is Initializable, OwnableUpgradeable, PausableUpgradeable, IERC
 
     // @notice Initialize the contract
     /// @param _router Address of the Uniswap V3 router
-    /// @param _quoter Address of the Uniswap V3 quoter
     /// @param _WETH Address of the WETH
     /// @param _deadline Deadline for the swap
-    function initialize(address _router, address _quoter, address _WETH, uint256 _deadline) public initializer {
+    function initialize(address _router, address _WETH, uint256 _deadline) public initializer {
         router = ISwapRouter(_router);
-        quoter = IQuoter(_quoter);
         WETH = _WETH;
         deadline = _deadline;
         __Ownable_init(msg.sender);

@@ -11,7 +11,6 @@ const deploy: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deploy } = deployments;
 
 const _router = process.env.ROUTER;
-const _quoter = process.env.QUOTER;
 const WETH = process.env.WETH;
 const _deadline = process.env.DEADLINE;
 
@@ -26,7 +25,6 @@ const _deadline = process.env.DEADLINE;
           methodName: "initialize",
           args: [
             _router,
-            _quoter,
             WETH,
             _deadline,
           ],
