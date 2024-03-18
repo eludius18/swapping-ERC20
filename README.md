@@ -45,7 +45,6 @@ Create a `.env` file in the root directory of the project and add the following 
 
 ```properties
 ROUTER_ADDRESS = "<UniswapV3_Router_Address>" --> "0xE592427A0AEce92De3Edee1F18E0157C05861564"
-QUOTER_ADDRESS = "<UniswapV3_Quoter_Address>" --> "0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6"
 WETH_ADDRESS = "<WETH_Address>" --> "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
 
 RPC_URL_ARBITRUM = "<Your_Arbitrum_RPC_URL>"
@@ -55,10 +54,9 @@ PRIVATE_KEY = "<Your_Private_Key>"
 - `RPC_URL_ARBITRUM`: This is the RPC URL for the Arbitrum network. You can get this URL from [Alchemy](https://www.alchemy.com/) or [Infura](https://infura.io/).
 - `PRIVATE_KEY`: This is the private key of your Ethereum account. **Be careful not to share this key with anyone.**
 - `ROUTER_ADDRESS`: This is the address of the Uniswap V3 Router contract. You can find this address in the [Uniswap V3 documentation](https://docs.uniswap.org/contracts/v3/reference/deployments).
-- `QUOTER_ADDRESS`: This is the address of the Uniswap V3 Quoter contract. You can find this address in the [Uniswap V3 documentation](https://docs.uniswap.org/contracts/v3/reference/deployments).
 - `WETH_ADDRESS`: This is the address of the WETH contract. You can find this address in the [Uniswap V3 documentation](https://docs.uniswap.org/contracts/v3/reference/deployments).
 
-Replace `<Your_Arbitrum_RPC_URL>`, `<Your_Private_Key>`, `<UniswapV3_Router_Address>`, `<UniswapV3_Quoter_Address>`, and `<WETH_Address>` with your actual values.
+Replace `<Your_Arbitrum_RPC_URL>`, `<Your_Private_Key>`, `<UniswapV3_Router_Address>` and `<WETH_Address>` with your actual values.
 
 
 ### 2. Compile the contracts
