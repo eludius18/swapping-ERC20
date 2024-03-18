@@ -59,7 +59,7 @@ PRIVATE_KEY = "<Your_Private_Key>"
 - `WETH_ADDRESS`: This is the address of the WETH contract. You can find this address in the [Uniswap V3 documentation](https://docs.uniswap.org/contracts/v3/reference/deployments).
 - `TOKENERC20`: This is the address of the TokenERC20 contract.
 
-Replace `<Your_Arbitrum_RPC_URL>`, `<Your_Private_Key>`, `<UniswapV3_Router_Address>` and `<WETH_Address>` with your actual values.
+Replace `<Your_Arbitrum_RPC_URL>`, `<Your_Private_Key>`, `<UniswapV3_Router_Address>`, `<WETH_Address>` and `<TokenERC20_Address>` with your actual values.
 
 
 ### 2. Compile the contracts
