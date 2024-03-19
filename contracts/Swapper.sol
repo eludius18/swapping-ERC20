@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.20;
 
-import "./interface/IERC20Swapper.sol";
+import "./interface/ERC20Swapper.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol";
 import "@uniswap/v3-periphery/contracts/interfaces/ISwapRouter.sol";
 
-contract Swapper is Initializable, OwnableUpgradeable, PausableUpgradeable, IERC20Swapper {
+contract Swapper is Initializable, OwnableUpgradeable, PausableUpgradeable, ERC20Swapper {
 
     ISwapRouter public router; // Uniswap V3 router
     address public WETH; // WETH address
@@ -35,7 +35,7 @@ contract Swapper is Initializable, OwnableUpgradeable, PausableUpgradeable, IERC
     /// @param token Address of the token to swap to
     /// @param amountOutMinimum Minimum amount of token to receive
     /// @return amountOut Amount of token received
-    function swapEtherToToken(address token, uint256 amountOutMinimum) external
+    function swapEtherToToken(address token, uint256 amountOutMinimum) public
     whenNotPaused()
     payable returns (uint256) 
     {
